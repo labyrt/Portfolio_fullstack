@@ -80,6 +80,7 @@ img { max-width: 100%; display: block; }
 .menu-button b { margin-left: 6px; font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; }
 
 .mobile-menu { position: fixed; z-index: 850; inset: var(--header-height) 0 0; padding: 26px 20px; background: var(--acid); color: #0a0a0a; overflow-y: auto; display: flex; flex-direction: column; }
+.mobile-menu[hidden] { display: none; }
 .mobile-menu nav { display: grid; }
 .mobile-menu nav a { font-size: clamp(2.35rem, 9.5vw, 6rem); line-height: .95; letter-spacing: -.07em; text-transform: uppercase; font-weight: 700; border-bottom: 2px solid #0a0a0a; padding: 12px 0; }
 .mobile-menu-meta { position: static; margin-top: auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; font-family: var(--font-mono); font-size: .72rem; }
