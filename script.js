@@ -405,8 +405,6 @@
   }
 
   function renderArchive() {
-    if (archiveContainer) archiveContainer.innerHTML = sortedProjects().map(archiveItem).join('');
-    bindDynamicEvents();
     applyFilters();
   }
 
@@ -467,10 +465,17 @@
   }
 
   function applyFilters() {
-    const queryMatches = projects.filter((project) => matchesQuery(project, state.query));
+    const orderedProjects = sortedProjects();
+    const queryMatches = orderedProjects.filter((project) => matchesQuery(project, state.query));
     const visibleProjects = queryMatches.filter((project) => state.filter === 'all' || project.category === state.filter);
-    const visibleIds = new Set(visibleProjects.map((project) => project.id));
-    $$('[data-archive-item]').forEach((item) => { item.hidden = !visibleIds.has(item.dataset.projectId); });
+
+    // Renderiza somente os projetos que correspondem à pesquisa e ao filtro ativos.
+    // Assim, nenhum item fora do resultado permanece visível por interferência do CSS.
+    if (archiveContainer) {
+      archiveContainer.innerHTML = visibleProjects.map(archiveItem).join('');
+    }
+    bindDynamicEvents();
+
     if (visibleCount) visibleCount.textContent = visibleProjects.length;
     if (emptyState) emptyState.hidden = visibleProjects.length !== 0;
     updateDashboard(queryMatches, visibleProjects);
