@@ -80,7 +80,7 @@ img { max-width: 100%; display: block; }
 .menu-button b { margin-left: 6px; font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; }
 
 .mobile-menu { position: fixed; z-index: 850; inset: var(--header-height) 0 0; padding: 26px 20px; background: var(--acid); color: #0a0a0a; overflow-y: auto; display: flex; flex-direction: column; }
-.mobile-menu[hidden] { display: none; }
+.mobile-menu[hidden] { display: none !important; }
 .mobile-menu nav { display: grid; }
 .mobile-menu nav a { font-size: clamp(2.35rem, 9.5vw, 6rem); line-height: .95; letter-spacing: -.07em; text-transform: uppercase; font-weight: 700; border-bottom: 2px solid #0a0a0a; padding: 12px 0; }
 .mobile-menu-meta { position: static; margin-top: auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; font-family: var(--font-mono); font-size: .72rem; }
@@ -230,6 +230,19 @@ kbd { border: 1px solid var(--ink); padding: 2px 6px; font-family: var(--font-mo
 .archive-actions a:hover, .archive-actions button:hover { background: #0a0a0a; color: var(--acid); }
 .empty-state { border: var(--line); padding: 30px; font-family: var(--font-mono); text-align: center; }
 
+
+.project-load-error {
+  width: var(--container);
+  margin: 0 auto;
+  border: var(--line);
+  background: #fff0f0;
+  color: #8b0000;
+  padding: 22px;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
 .about-grid { width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 1.05fr .65fr; gap: 70px; align-items: start; }
 .about-copy { max-width: 850px; }
 .about-copy p { font-size: clamp(1.05rem, 1.6vw, 1.45rem); line-height: 1.5; }
@@ -241,9 +254,16 @@ kbd { border: 1px solid var(--ink); padding: 2px 6px; font-family: var(--font-mo
 .portrait-label, .portrait-caption { display: flex; justify-content: space-between; gap: 16px; padding: 12px; font-family: var(--font-mono); font-size: .58rem; text-transform: uppercase; }
 .portrait-label { border-bottom: var(--line); }
 .portrait-caption { border-top: var(--line); flex-wrap: wrap; }
-.portrait-frame { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--acid); }
-.portrait-frame img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); mix-blend-mode: multiply; }
-.portrait-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(0,0,0,.24) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,.24) 1px, transparent 1px); background-size: 12.5% 12.5%; pointer-events: none; }
+.portrait-frame { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--paper-2); }
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: none;
+  mix-blend-mode: normal;
+}
+.portrait-grid { display: none; }
 .skills-board { width: var(--container); margin: 100px auto 0; border: var(--line); display: grid; grid-template-columns: .55fr 1.45fr; }
 .skills-title { padding: 24px; border-right: var(--line); }
 .skills-title .eyebrow { margin: 0 0 16px; }
