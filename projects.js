@@ -1,6 +1,5 @@
-window.PORTFOLIO_PROJECTS = [
-  {
-    id: 'zabaan', title: 'Zabaan', year: '2026', category: 'product', featured: true, visual: 'zabaan', status: 'published',
+// Compatibilidade: os dados dos projetos estão incorporados em script.js.
+2026', category: 'product', featured: true, visual: 'zabaan', status: 'published',
     description: {
       pt: 'Plataforma open source para aprender persa em português, com 12 aulas, flashcards, quizzes, escrita, progresso local, síntese de voz e tutor de IA executado com Ollama.',
       en: 'Open-source Persian learning platform for Portuguese speakers with 12 lessons, flashcards, quizzes, writing practice, local progress, speech synthesis and an optional Ollama-powered AI tutor.'
