@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="ink">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Portfólio de Lucy Mazzini — desenvolvimento full stack, front-end, design, IA, APIs e tecnologia criativa.">
+  <meta property="og:title" content="Lucy Mazzini — Creative Developer">
+  <meta property="og:description" content="Projetos web, produtos digitais, IA, interfaces e tecnologia criativa.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/og-cover.svg">
+  <title>Lucy Mazzini — Creative Developer</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+  <script src="./projects.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <canvas class="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" data-header>
+    <a class="brand magnetic" href="#top" aria-label="Lucy Mazzini — início">
+      <span class="brand-mark">LM</span>
+      <span class="brand-copy">Lucy Mazzini<br><em>creative developer</em></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#projetos" data-i18n="navProjects">Projetos</a>
+      <a href="#arquivo" data-i18n="navArchive">Arquivo</a>
+      <a href="#sobre" data-i18n="navAbout">Sobre</a>
+      <a href="#contato" data-i18n="navContact">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="utility-button" type="button" data-language aria-label="Alterar idioma">PT</button>
+      <button class="utility-button" type="button" data-theme-toggle aria-label="Alternar tema">◐</button>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+        <span></span><span></span><span></span><b>Menu</b>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden data-mobile-menu>
+    <nav aria-label="Navegação móvel">
+      <a href="#projetos" data-i18n="navProjects">Projetos</a>
+      <a href="#arquivo" data-i18n="navArchive">Arquivo</a>
+      <a href="#sobre" data-i18n="navAbout">Sobre</a>
+      <a href="#contato" data-i18n="navContact">Contato</a>
+    </nav>
+    <div class="mobile-menu-meta">
+      <span>São Paulo, BR</span>
+      <div class="mobile-menu-links">
+        <a href="mailto:lucymazzini666@gmail.com">E-mail</a>
+        <a href="https://github.com/labyrt" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/lucy-mazzini-0b1034323" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="conteudo">
+    <section class="hero" id="top">
+      <div class="hero-kicker reveal">
+        <span class="status-dot"></span>
+        <span data-i18n="availability">Disponível para oportunidades em tecnologia</span>
+        <span>São Paulo · Brasil</span>
+      </div>
+
+      <div class="hero-title-wrap">
+        <h1 class="hero-title" aria-label="Lucy Mazzini">
+          <span class="hero-line hero-line--one">LUCY</span>
+          <span class="hero-line hero-line--two">MAZZINI</span>
+        </h1>
+        <div class="hero-orbit" aria-hidden="true">
+          <span>DEV</span><span>DESIGN</span><span>AI</span><span>WEB</span>
+        </div>
+      </div>
+
+      <div class="hero-bottom reveal">
+        <p class="hero-intro" data-i18n="heroIntro">
+          Desenvolvo produtos digitais que aproximam código, design e experiência humana — de interfaces responsivas a aplicações com APIs, IA e hardware criativo.
+        </p>
+        <div class="hero-actions">
+          <a class="button button--acid magnetic" href="#projetos" data-i18n="seeProjects">Ver projetos</a>
+          <a class="button button--outline magnetic" href="https://github.com/labyrt" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="button button--outline magnetic" href="https://www.linkedin.com/in/lucy-mazzini-0b1034323" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+        <div class="hero-index" aria-label="Resumo do portfólio">
+          <div><strong data-project-count>33</strong><span data-i18n="projectCount">projetos mapeados</span></div>
+          <div><strong>24</strong><span data-i18n="branchCount">branches de estudo</span></div>
+          <div><strong>2020—26</strong><span data-i18n="practiceYears">prática em programação</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>JAVASCRIPT</span><i>✦</i><span>REACT</span><i>✦</i><span>TYPESCRIPT</span><i>✦</i><span>PYTHON</span><i>✦</i><span>APIs</span><i>✦</i><span>UX</span><i>✦</i><span>ARDUINO</span><i>✦</i><span>CREATIVE CODE</span><i>✦</i>
+        <span>JAVASCRIPT</span><i>✦</i><span>REACT</span><i>✦</i><span>TYPESCRIPT</span><i>✦</i><span>PYTHON</span><i>✦</i><span>APIs</span><i>✦</i><span>UX</span><i>✦</i><span>ARDUINO</span><i>✦</i><span>CREATIVE CODE</span><i>✦</i>
+      </div>
+    </div>
+
+    <section class="section projects-section" id="projetos">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-number">01</span>
+          <p class="eyebrow" data-i18n="selectedWork">Trabalhos selecionados</p>
+        </div>
+        <h2 data-i18n="projectsHeading">Projetos que unem função, narrativa e execução.</h2>
+      </div>
+      <div class="featured-grid" data-featured-projects></div>
+    </section>
+
+    <section class="section archive-section" id="arquivo">
+      <div class="section-heading section-heading--archive reveal">
+        <div>
+          <span class="section-number">02</span>
+          <p class="eyebrow" data-i18n="completeArchive">Arquivo completo</p>
+        </div>
+        <h2 data-i18n="archiveHeading">Todos os repositórios, branches e deploys — sem repetição.</h2>
+      </div>
+
+      <div class="archive-toolbar reveal">
+        <label class="search-field">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Buscar projeto, tecnologia ou tema" aria-label="Buscar projetos" data-search>
+          <kbd>/</kbd>
+        </label>
+        <div class="filter-row" role="group" aria-label="Filtrar projetos" data-filters>
+          <button class="filter is-active" type="button" data-filter="all" data-i18n="filterAll">Todos</button>
+          <button class="filter" type="button" data-filter="product" data-i18n="filterProduct">Produtos</button>
+          <button class="filter" type="button" data-filter="frontend">Front-end</button>
+          <button class="filter" type="button" data-filter="fundamentals" data-i18n="filterFundamentals">Fundamentos</button>
+          <button class="filter" type="button" data-filter="experimental" data-i18n="filterExperimental">Experimentos</button>
+        </div>
+      </div>
+
+      <div class="archive-meta reveal">
+        <span><b data-visible-count>0</b> <span data-i18n="visibleResults">resultados visíveis</span></span>
+        <a href="https://github.com/labyrt/curso_ebac_frontend" target="_blank" rel="noopener noreferrer" data-i18n="courseRepo">Abrir repositório do curso ↗</a>
+      </div>
+      <div class="archive-list" data-project-list></div>
+      <p class="empty-state" hidden data-empty-state data-i18n="emptyState">Nenhum projeto encontrado com esses filtros.</p>
+    </section>
+
+    <section class="section about-section" id="sobre">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-number">03</span>
+          <p class="eyebrow" data-i18n="aboutLabel">Sobre</p>
+        </div>
+        <h2 data-i18n="aboutHeading">Curiosidade como método. Tecnologia como linguagem.</h2>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-copy reveal">
+          <p class="about-lead" data-i18n="aboutLead">
+            Sou Lucy Mazzini, desenvolvedora júnior com trajetória entre programação, design, pesquisa e arte tecnológica.
+          </p>
+          <p data-i18n="aboutBodyOne">
+            Minha prática combina construção de interfaces, lógica, APIs e experiência do usuário. Gosto de transformar ideias complexas em produtos claros, acessíveis e visualmente marcantes.
+          </p>
+          <p data-i18n="aboutBodyTwo">
+            Desde 2020, desenvolvo projetos web acadêmicos e autorais. No Makers / STEAM Lab USP, também investigo prototipagem, eletrônica e sistemas interativos — uma ponte entre software, objeto e espaço.
+          </p>
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/lucy-mazzini-0b1034323" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/labyrt" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.figma.com/deck/OwV2oFHhWNgeaJGtbvGE5b/portf%C3%B3lio?node-id=4-32" target="_blank" rel="noopener noreferrer" data-i18n="artPortfolio">Portfólio artístico ↗</a>
+          </div>
+        </article>
+
+        <aside class="portrait-card reveal">
+          <div class="portrait-label"><span>PROFILE / 2026</span><span>SP — BR</span></div>
+          <div class="portrait-frame">
+            <img src="https://avatars.githubusercontent.com/u/202946715?v=4" alt="Foto de perfil de Lucy Mazzini" loading="lazy">
+            <div class="portrait-grid" aria-hidden="true"></div>
+          </div>
+          <div class="portrait-caption">
+            <span>Full Stack Python · EBAC</span>
+            <span>Creative technology · USP</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="skills-board reveal">
+        <div class="skills-title">
+          <span class="eyebrow" data-i18n="toolbox">Caixa de ferramentas</span>
+          <p data-i18n="toolboxDescription">Tecnologias usadas em projetos reais, exercícios e protótipos.</p>
+        </div>
+        <div class="skills-cloud" aria-label="Competências">
+          <span>JavaScript</span><span>TypeScript</span><span>Python</span><span>React</span><span>Vue.js</span><span>Node.js</span><span>HTML5</span><span>CSS3</span><span>Sass</span><span>Less</span><span>Styled Components</span><span>Bootstrap</span><span>jQuery</span><span>REST APIs</span><span>Git / GitHub</span><span>Vercel</span><span>Gulp</span><span>Grunt</span><span>Arduino / C++</span><span>UX</span><span>Responsive Design</span><span>Web Speech API</span><span>Ollama</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="trajetoria">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-number">04</span>
+          <p class="eyebrow" data-i18n="trajectory">Trajetória</p>
+        </div>
+        <h2 data-i18n="trajectoryHeading">Experiência multidisciplinar, execução técnica e repertório visual.</h2>
+      </div>
+
+      <div class="timeline" data-timeline>
+        <article class="timeline-item reveal"><time>2025—agora</time><div><h3>Makers USP / STEAM Lab</h3><p data-i18n="timelineMakers">Pesquisa e projetos interdisciplinares em tecnologia, prototipagem, eletrônica criativa e inovação.</p></div><span>RESEARCH</span></article>
+        <article class="timeline-item reveal"><time>2024—2025</time><div><h3>ChuckyJason</h3><p data-i18n="timelineChucky">Pesquisa criativa publicitária, referências visuais, tendências e construção de narrativas para campanhas.</p></div><span>CREATIVE</span></article>
+        <article class="timeline-item reveal"><time>2024—2025</time><div><h3>Guma Joana</h3><p data-i18n="timelineGuma">Pesquisa, desenvolvimento conceitual e assistência criativa em coleção de moda.</p></div><span>DESIGN</span></article>
+        <article class="timeline-item reveal"><time>2024—2025</time><div><h3>Bain &amp; Company</h3><p data-i18n="timelineBain">Estágio temporário com suporte operacional, organização de informações e colaboração entre áreas.</p></div><span>BUSINESS</span></article>
+        <article class="timeline-item reveal"><time>2023</time><div><h3>Cartel011</h3><p data-i18n="timelineCartel">Design gráfico e assistência de direção de arte para peças, campanhas e identidades visuais.</p></div><span>ART DIRECTION</span></article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="contact-panel reveal">
+        <span class="contact-label" data-i18n="contactLabel">Vamos construir algo relevante.</span>
+        <h2 data-i18n="contactHeading">Disponível para vagas júnior, projetos e colaborações.</h2>
+        <div class="contact-actions">
+          <a class="contact-email magnetic" href="mailto:lucymazzini666@gmail.com">lucymazzini666@gmail.com <span>↗</span></a>
+          <div class="contact-socials">
+            <a href="https://github.com/labyrt" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/lucy-mazzini-0b1034323" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span data-year></span> Lucy Mazzini</span>
+    <span data-i18n="footerBuilt">Projetado e desenvolvido com HTML, CSS e JavaScript.</span>
+    <a href="#top" data-i18n="backTop">Voltar ao topo ↑</a>
+  </footer>
+
+  <dialog class="project-dialog" data-project-dialog aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" data-dialog-close aria-label="Fechar">×</button>
+    <div class="dialog-layout">
+      <div class="dialog-preview" data-dialog-preview>
+        <div class="dialog-browser-bar"><span></span><span></span><span></span><small data-dialog-domain>preview</small></div>
+        <div class="dialog-placeholder" data-dialog-placeholder>
+          <span data-i18n="previewPrompt">Clique em “carregar preview” para abrir o projeto aqui.</span>
+          <button class="button button--acid" type="button" data-load-preview data-i18n="loadPreview">Carregar preview</button>
+        </div>
+      </div>
+      <div class="dialog-content">
+        <div class="dialog-meta"><span data-dialog-number></span><span data-dialog-category></span><span data-dialog-year></span></div>
+        <h2 id="dialog-title" data-dialog-title></h2>
+        <p data-dialog-description></p>
+        <div class="dialog-stack" data-dialog-stack></div>
+        <div class="dialog-links" data-dialog-links></div>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript>
+    <div class="noscript">Este portfólio usa JavaScript para carregar o arquivo de projetos e as interações.</div>
+  </noscript>
+</body>
+</html>
