@@ -1,12 +1,15 @@
 # Lucy Mazzini — Portfolio
 
-Portfólio profissional de tecnologia de **Lucy Mazzini**, criado para reunir repositórios, branches e deploys da Vercel em uma única experiência, sem duplicar o mesmo projeto em cartões diferentes.
+Portfólio profissional de tecnologia de **Lucy Mazzini**, criado para reunir repositórios, branches e deploys da Vercel em uma experiência interativa e organizada.
 
 ## O que este projeto entrega
 
 - curadoria de projetos autorais, exercícios e experimentos;
-- busca por título, tema, branch e tecnologia;
-- filtros por produto, front-end, fundamentos e experimentos;
+- busca tolerante a acentos por título, tema, branch e tecnologia;
+- filtros com contadores por produto, front-end, fundamentos e experimentos;
+- gráficos interativos e indicadores atualizados conforme a pesquisa;
+- pesquisas rápidas por tecnologia e ordenação por curadoria, nome ou data;
+- sequência de destaques: Zabaan, Casa Verde e Ateliê Aurora;
 - visualização detalhada em modal;
 - preview sob demanda de demos publicadas;
 - interface bilíngue em português e inglês;
@@ -24,7 +27,7 @@ Princípios adotados:
 
 1. **O trabalho vem antes do efeito.** Animações reforçam hierarquia e navegação.
 2. **Clareza para recrutadores.** Cada projeto mostra função, tecnologias, código e demo.
-3. **Arquivo completo sem repetição.** Um mesmo projeto pode apontar para GitHub, branch e Vercel em um único registro.
+3. **Arquivo navegável.** Cada projeto apresenta seus acessos para GitHub, branch e Vercel em um único registro.
 4. **Performance progressiva.** Previews externos só carregam após interação.
 5. **Acessibilidade.** Semântica, foco visível, teclado e redução de movimento.
 
@@ -32,7 +35,6 @@ Princípios adotados:
 
 ```text
 .
-├── .github/workflows/pages.yml
 ├── assets/
 │   ├── favicon.svg
 │   └── og-cover.svg
@@ -68,13 +70,16 @@ Depois acesse `http://localhost:8000`.
 
 ### GitHub Pages
 
-O workflow em `.github/workflows/pages.yml` publica o conteúdo da branch `main`. No GitHub, abra **Settings → Pages** e escolha **GitHub Actions** como fonte.
+Como o `index.html` está na raiz, o site pode ser publicado pelo GitHub Pages escolhendo **Deploy from a branch**, branch `main` e pasta `/root`.
 
 ### Vercel
 
 O projeto também funciona sem configuração de build: importe o repositório e mantenha o diretório raiz como saída estática.
 
 ## Contato
+
+- Repositório do portfólio: https://github.com/labyrt/Portfolio_fullstack
+- Site publicado: https://noky.vercel.app
 
 - GitHub: https://github.com/labyrt
 - LinkedIn: https://www.linkedin.com/in/lucy-mazzini-0b1034323
@@ -91,3 +96,7 @@ O portfólio inclui links diretos e visíveis para:
 - repositórios e branches correspondentes no GitHub.
 
 Nos projetos em destaque, os botões **Demo ao vivo**, **GitHub** e **Abrir projeto** ficam visíveis no cartão. No arquivo completo, os atalhos **LIVE** e **GH** permitem abrir diretamente a publicação ou o código-fonte.
+
+## Formação e experiência
+
+O portfólio inclui uma seção de estudos com o profissionalizante Full Stack Python da EBAC e o percurso em Engenharia Ambiental na USP, além de um atalho direto para experiências profissionais.

@@ -36,6 +36,8 @@
       <a href="#projetos" data-i18n="navProjects">Projetos</a>
       <a href="#arquivo" data-i18n="navArchive">Arquivo</a>
       <a href="#sobre" data-i18n="navAbout">Sobre</a>
+      <a href="#estudos" data-i18n="navStudies">Estudos</a>
+      <a href="#experiencias" data-i18n="navExperience">Experiências</a>
       <a href="#contato" data-i18n="navContact">Contato</a>
     </nav>
 
@@ -53,6 +55,8 @@
       <a href="#projetos" data-i18n="navProjects">Projetos</a>
       <a href="#arquivo" data-i18n="navArchive">Arquivo</a>
       <a href="#sobre" data-i18n="navAbout">Sobre</a>
+      <a href="#estudos" data-i18n="navStudies">Estudos</a>
+      <a href="#experiencias" data-i18n="navExperience">Experiências</a>
       <a href="#contato" data-i18n="navContact">Contato</a>
     </nav>
     <div class="mobile-menu-meta">
@@ -124,26 +128,46 @@
           <span class="section-number">02</span>
           <p class="eyebrow" data-i18n="completeArchive">Arquivo completo</p>
         </div>
-        <h2 data-i18n="archiveHeading">Todos os repositórios, branches e deploys — sem repetição.</h2>
+        <h2 data-i18n="archiveHeading">Todos os repositórios, branches e deploys.</h2>
       </div>
 
       <div class="archive-toolbar reveal">
         <label class="search-field">
           <span aria-hidden="true">⌕</span>
-          <input type="search" placeholder="Buscar projeto, tecnologia ou tema" aria-label="Buscar projetos" data-search>
+          <input type="search" placeholder="Buscar projeto, tecnologia ou tema" aria-label="Buscar projetos" autocomplete="off" data-search>
+          <button class="search-clear" type="button" aria-label="Limpar pesquisa" title="Limpar pesquisa" hidden data-clear-search>×</button>
           <kbd>/</kbd>
         </label>
         <div class="filter-row" role="group" aria-label="Filtrar projetos" data-filters>
-          <button class="filter is-active" type="button" data-filter="all" data-i18n="filterAll">Todos</button>
-          <button class="filter" type="button" data-filter="product" data-i18n="filterProduct">Produtos</button>
-          <button class="filter" type="button" data-filter="frontend">Front-end</button>
-          <button class="filter" type="button" data-filter="fundamentals" data-i18n="filterFundamentals">Fundamentos</button>
-          <button class="filter" type="button" data-filter="experimental" data-i18n="filterExperimental">Experimentos</button>
+          <button class="filter is-active" type="button" data-filter="all"><span data-i18n="filterAll">Todos</span><b data-filter-count="all">0</b></button>
+          <button class="filter" type="button" data-filter="product"><span data-i18n="filterProduct">Produtos</span><b data-filter-count="product">0</b></button>
+          <button class="filter" type="button" data-filter="frontend"><span>Front-end</span><b data-filter-count="frontend">0</b></button>
+          <button class="filter" type="button" data-filter="fundamentals"><span data-i18n="filterFundamentals">Fundamentos</span><b data-filter-count="fundamentals">0</b></button>
+          <button class="filter" type="button" data-filter="experimental"><span data-i18n="filterExperimental">Experimentos</span><b data-filter-count="experimental">0</b></button>
         </div>
       </div>
 
-      <div class="archive-meta reveal">
-        <span><b data-visible-count>0</b> <span data-i18n="visibleResults">resultados visíveis</span></span>
+      <div class="archive-utility reveal">
+        <div class="search-suggestions" aria-label="Pesquisas rápidas" data-search-suggestions></div>
+        <label class="sort-field">
+          <span data-i18n="sortLabel">Ordenar</span>
+          <select data-sort aria-label="Ordenar projetos">
+            <option value="curated" data-i18n="sortCurated">Curadoria</option>
+            <option value="title" data-i18n="sortTitle">A—Z</option>
+            <option value="newest" data-i18n="sortNewest">Mais recentes</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="archive-dashboard reveal" aria-label="Resumo dos resultados">
+        <div class="archive-stat"><strong data-stat-visible>0</strong><span data-i18n="statsVisible">projetos</span></div>
+        <div class="archive-stat"><strong data-stat-live>0</strong><span data-i18n="statsLive">demos ao vivo</span></div>
+        <div class="archive-stat"><strong data-stat-tech>0</strong><span data-i18n="statsTech">tecnologias</span></div>
+        <div class="results-chart" data-results-chart></div>
+      </div>
+
+      <div class="archive-meta reveal" aria-live="polite">
+        <span><b data-visible-count>0</b> <span data-i18n="visibleResults">resultados visíveis</span> <em data-query-status></em></span>
         <a href="https://github.com/labyrt/curso_ebac_frontend" target="_blank" rel="noopener noreferrer" data-i18n="courseRepo">Abrir repositório do curso ↗</a>
       </div>
       <div class="archive-list" data-project-list></div>
@@ -201,19 +225,62 @@
       </div>
     </section>
 
-    <section class="section timeline-section" id="trajetoria">
+    <section class="section studies-section" id="estudos">
       <div class="section-heading reveal">
         <div>
           <span class="section-number">04</span>
-          <p class="eyebrow" data-i18n="trajectory">Trajetória</p>
+          <p class="eyebrow" data-i18n="studiesLabel">Estudos</p>
         </div>
-        <h2 data-i18n="trajectoryHeading">Experiência multidisciplinar, execução técnica e repertório visual.</h2>
+        <h2 data-i18n="studiesHeading">Formação técnica e pensamento interdisciplinar.</h2>
+      </div>
+
+      <div class="study-grid">
+        <article class="study-card reveal">
+          <div class="study-card-top"><span>EBAC</span><span data-i18n="studyOngoing">EM ANDAMENTO</span></div>
+          <div class="study-period">2024—2026</div>
+          <h3 data-i18n="studyEbacTitle">Desenvolvedora Full Stack Python — Profissionalizante</h3>
+          <p data-i18n="studyEbacSummary">Formação profissionalizante de dois anos voltada à construção de aplicações web completas, da interface ao back-end, com prática contínua por projetos.</p>
+          <div class="study-learning">
+            <span data-i18n="studyLearningLabel">Aprendizados</span>
+            <ul>
+              <li data-i18n="studyEbacOne">HTML, CSS, JavaScript e TypeScript com interfaces responsivas.</li>
+              <li data-i18n="studyEbacTwo">React, Vue, Node.js, APIs, lógica de programação e organização de aplicações.</li>
+              <li data-i18n="studyEbacThree">Git, GitHub, automação de build, testes, publicação e boas práticas de desenvolvimento.</li>
+            </ul>
+          </div>
+          <div class="study-tags"><span>PYTHON</span><span>JAVASCRIPT</span><span>REACT</span><span>APIs</span><span>GIT</span></div>
+        </article>
+
+        <article class="study-card study-card--usp reveal">
+          <div class="study-card-top"><span>USP</span><span data-i18n="studyPaused">CURSO TRANCADO</span></div>
+          <div class="study-period">2023—2026</div>
+          <h3 data-i18n="studyUspTitle">Engenharia Ambiental — Bacharelado</h3>
+          <p data-i18n="studyUspSummary">Percurso universitário interdisciplinar que fortaleceu pensamento sistêmico, pesquisa e análise de problemas complexos ligados a ambiente, sociedade e tecnologia.</p>
+          <div class="study-learning">
+            <span data-i18n="studyLearningLabel">Aprendizados</span>
+            <ul>
+              <li data-i18n="studyUspOne">Raciocínio quantitativo, investigação científica e leitura crítica de dados.</li>
+              <li data-i18n="studyUspTwo">Compreensão de sistemas ambientais e relações entre processos naturais e humanos.</li>
+              <li data-i18n="studyUspThree">Trabalho interdisciplinar, documentação e desenvolvimento de soluções orientadas a impacto.</li>
+            </ul>
+          </div>
+          <div class="study-tags"><span>SISTEMAS</span><span>PESQUISA</span><span>DADOS</span><span>AMBIENTE</span><span>STEAM</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="experiencias">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-number">05</span>
+          <p class="eyebrow" data-i18n="experienceLabel">Experiências</p>
+        </div>
+        <h2 data-i18n="experienceHeading">Experiência multidisciplinar, execução técnica e repertório visual.</h2>
       </div>
 
       <div class="timeline" data-timeline>
         <article class="timeline-item reveal"><time>2025—agora</time><div><h3>Makers USP / STEAM Lab</h3><p data-i18n="timelineMakers">Pesquisa e projetos interdisciplinares em tecnologia, prototipagem, eletrônica criativa e inovação.</p></div><span>RESEARCH</span></article>
         <article class="timeline-item reveal"><time>2024—2025</time><div><h3>ChuckyJason</h3><p data-i18n="timelineChucky">Pesquisa criativa publicitária, referências visuais, tendências e construção de narrativas para campanhas.</p></div><span>CREATIVE</span></article>
-        <article class="timeline-item reveal"><time>2024—2025</time><div><h3>Guma Joana</h3><p data-i18n="timelineGuma">Pesquisa, desenvolvimento conceitual e assistência criativa em coleção de moda.</p></div><span>DESIGN</span></article>
         <article class="timeline-item reveal"><time>2024—2025</time><div><h3>Bain &amp; Company</h3><p data-i18n="timelineBain">Estágio temporário com suporte operacional, organização de informações e colaboração entre áreas.</p></div><span>BUSINESS</span></article>
         <article class="timeline-item reveal"><time>2023</time><div><h3>Cartel011</h3><p data-i18n="timelineCartel">Design gráfico e assistência de direção de arte para peças, campanhas e identidades visuais.</p></div><span>ART DIRECTION</span></article>
       </div>

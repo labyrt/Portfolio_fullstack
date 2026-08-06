@@ -9,7 +9,7 @@ window.PORTFOLIO_PROJECTS = [
     repo: 'https://github.com/labyrt/Zabaan', demo: 'https://zabaan.vercel.app', source: 'repository', deployment: 'zabaan'
   },
   {
-    id: 'birthday', title: 'Aniversário Virtual', year: '2026', category: 'product', featured: true, visual: 'birthday', status: 'published',
+    id: 'birthday', title: 'Aniversário Virtual', year: '2026', category: 'product', featured: false, visual: 'birthday', status: 'published',
     description: {
       pt: 'Landing page de evento para 13 de abril com contagem regressiva, humor brasileiro e uma direção visual inspirada em MSN, dreamcore e cultura digital dos anos 2000.',
       en: 'Event landing page for April 13 featuring a live countdown, Brazilian internet humor and a visual direction inspired by MSN, dreamcore and 2000s digital culture.'
@@ -18,7 +18,7 @@ window.PORTFOLIO_PROJECTS = [
     repo: 'https://github.com/labyrt/curso_ebac_frontend/tree/agenda_anicersario', branch: 'agenda_anicersario', demo: 'https://aniversario-virtual-lucy.vercel.app', source: 'branch', deployment: 'aniversario-virtual-lucy'
   },
   {
-    id: 'avatar', title: 'Avatar: A Lenda de Aang', year: '2026', category: 'frontend', featured: true, visual: 'avatar', status: 'published',
+    id: 'avatar', title: 'Avatar: A Lenda de Aang', year: '2026', category: 'frontend', featured: false, visual: 'avatar', status: 'published',
     description: {
       pt: 'Landing page temática com navegação responsiva, hierarquia cinematográfica e composição visual baseada nos quatro elementos do universo de Avatar.',
       en: 'Themed landing page with responsive navigation, cinematic hierarchy and visual composition based on the four elements from the Avatar universe.'
@@ -36,15 +36,6 @@ window.PORTFOLIO_PROJECTS = [
     repo: 'https://github.com/labyrt/exercicio_loja', branch: 'exercicio_loja', demo: 'https://exercicio-loja-self.vercel.app', source: 'repository + branch', deployment: 'exercicio-loja'
   },
   {
-    id: 'ebac-sports', title: 'EBAC Sports', year: '2026', category: 'product', featured: true, visual: 'sports', status: 'code',
-    description: {
-      pt: 'Loja de artigos esportivos em React e TypeScript, consumindo uma API externa e implementando catálogo, favoritos e carrinho com estado local.',
-      en: 'Sports store built with React and TypeScript, consuming an external API and implementing a catalog, favorites and local-state shopping cart.'
-    },
-    stack: ['React', 'TypeScript', 'Styled Components', 'REST API'],
-    repo: 'https://github.com/labyrt/ebac_sports', source: 'repository'
-  },
-  {
     id: 'atelie-aurora', title: 'Ateliê Aurora', year: '2026', category: 'frontend', featured: true, visual: 'fashion', status: 'published',
     description: {
       pt: 'Landing page editorial para moda feminina premium, com hero fotográfico, carrossel, catálogo, descontos, depoimentos e newsletter.',
@@ -55,9 +46,9 @@ window.PORTFOLIO_PROJECTS = [
   },
   {
     id: 'portfolio', title: 'Lucy Mazzini — Portfolio', year: '2026', category: 'product', featured: false, visual: 'portfolio', status: 'published',
-    description: { pt: 'Sistema de portfólio brutalista e responsivo que organiza repositórios, branches e deploys sem duplicação, com filtros, busca, preview ao vivo e interface bilíngue.', en: 'Brutalist responsive portfolio system organizing repositories, branches and deployments without duplication, with filters, search, live previews and bilingual UI.' },
+    description: { pt: 'Sistema de portfólio brutalista e responsivo que reúne repositórios, branches e deploys em um arquivo interativo, com filtros, busca, gráficos, preview ao vivo e interface bilíngue.', en: 'Brutalist responsive portfolio system bringing repositories, branches and deployments into an interactive archive with filters, search, charts, live previews and a bilingual interface.' },
     stack: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Pages', 'Vercel'],
-    repo: 'https://github.com/labyrt/labyrt-portfolio', demo: 'https://labyrt-portfolio.vercel.app', source: 'repository', deployment: 'labyrt-portfolio'
+    repo: 'https://github.com/labyrt/Portfolio_fullstack', demo: 'https://noky.vercel.app', source: 'repository', deployment: 'noky'
   },
   {
     id: 'styled-jobs', title: 'EBAC Jobs — Styled Components', year: '2026', category: 'frontend', featured: false, visual: 'jobs', status: 'code',
@@ -217,6 +208,12 @@ window.PORTFOLIO_PROJECTS = [
   },
   {
     id: 'inova-usp', title: 'Escultura Interativa — INOVA USP', year: '2025', category: 'experimental', featured: false, visual: 'arduino', status: 'case-study',
+    description: { pt: 'Escultura programada em Arduino/C++ com temporizador, display Nokia 5110, motor DC e lâmpada acionados em uma sequência performática.', en: 'Interactive sculpture programmed in Arduino/C++ with a timer, Nokia 5110 display, DC motor and lamp triggered in a performative sequence.' },
+    stack: ['Arduino', 'C++', 'Electronics', 'Nokia 5110', 'DC Motor'],
+    repo: 'https://github.com/labyrt', source: 'case study'
+  }
+];
+', title: 'Escultura Interativa — INOVA USP', year: '2025', category: 'experimental', featured: false, visual: 'arduino', status: 'case-study',
     description: { pt: 'Escultura programada em Arduino/C++ com temporizador, display Nokia 5110, motor DC e lâmpada acionados em uma sequência performática.', en: 'Interactive sculpture programmed in Arduino/C++ with a timer, Nokia 5110 display, DC motor and lamp triggered in a performative sequence.' },
     stack: ['Arduino', 'C++', 'Electronics', 'Nokia 5110', 'DC Motor'],
     repo: 'https://github.com/labyrt', source: 'case study'

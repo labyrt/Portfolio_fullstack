@@ -6,27 +6,33 @@
     get(key) { try { return window.localStorage.getItem(key); } catch { return null; } },
     set(key, value) { try { window.localStorage.setItem(key, value); } catch { /* Storage may be blocked in embedded previews. */ } }
   };
-  const state = { language: storage.get('portfolio-language') || 'pt', filter: 'all', query: '', activeProject: null };
+  const state = { language: storage.get('portfolio-language') || 'pt', filter: 'all', query: '', sort: 'curated', activeProject: null };
 
   const translations = {
     pt: {
-      navProjects: 'Projetos', navArchive: 'Arquivo', navAbout: 'Sobre', navContact: 'Contato',
+      navProjects: 'Projetos', navArchive: 'Arquivo', navAbout: 'Sobre', navStudies: 'Estudos', navExperience: 'Experiências', navContact: 'Contato',
       availability: 'Disponível para oportunidades em tecnologia',
       heroIntro: 'Desenvolvo produtos digitais que aproximam código, design e experiência humana — de interfaces responsivas a aplicações com APIs, IA e hardware criativo.',
       seeProjects: 'Ver projetos', projectCount: 'projetos mapeados', branchCount: 'branches de estudo', practiceYears: 'prática em programação',
       selectedWork: 'Trabalhos selecionados', projectsHeading: 'Projetos que unem função, narrativa e execução.',
-      completeArchive: 'Arquivo completo', archiveHeading: 'Todos os repositórios, branches e deploys — sem repetição.',
+      completeArchive: 'Arquivo completo', archiveHeading: 'Todos os repositórios, branches e deploys.',
       filterAll: 'Todos', filterProduct: 'Produtos', filterFundamentals: 'Fundamentos', filterExperimental: 'Experimentos',
       visibleResults: 'resultados visíveis', courseRepo: 'Abrir repositório do curso ↗', emptyState: 'Nenhum projeto encontrado com esses filtros.',
+      sortLabel: 'Ordenar', sortCurated: 'Curadoria', sortTitle: 'A—Z', sortNewest: 'Mais recentes', clearSearch: 'Limpar pesquisa',
+      statsVisible: 'projetos', statsLive: 'demos ao vivo', statsTech: 'tecnologias', quickSearch: 'Pesquisas rápidas', queryFor: 'para',
       aboutLabel: 'Sobre', aboutHeading: 'Curiosidade como método. Tecnologia como linguagem.',
       aboutLead: 'Sou Lucy Mazzini, desenvolvedora júnior com trajetória entre programação, design, pesquisa e arte tecnológica.',
       aboutBodyOne: 'Minha prática combina construção de interfaces, lógica, APIs e experiência do usuário. Gosto de transformar ideias complexas em produtos claros, acessíveis e visualmente marcantes.',
       aboutBodyTwo: 'Desde 2020, desenvolvo projetos web acadêmicos e autorais. No Makers / STEAM Lab USP, também investigo prototipagem, eletrônica e sistemas interativos — uma ponte entre software, objeto e espaço.',
       artPortfolio: 'Portfólio artístico ↗', toolbox: 'Caixa de ferramentas', toolboxDescription: 'Tecnologias usadas em projetos reais, exercícios e protótipos.',
-      trajectory: 'Trajetória', trajectoryHeading: 'Experiência multidisciplinar, execução técnica e repertório visual.',
+      studiesLabel: 'Estudos', studiesHeading: 'Formação técnica e pensamento interdisciplinar.', studyOngoing: 'Em andamento', studyPaused: 'Curso trancado', studyLearningLabel: 'Aprendizados',
+      studyEbacTitle: 'Desenvolvedora Full Stack Python — Profissionalizante', studyEbacSummary: 'Formação profissionalizante de dois anos voltada à construção de aplicações web completas, da interface ao back-end, com prática contínua por projetos.',
+      studyEbacOne: 'HTML, CSS, JavaScript e TypeScript com interfaces responsivas.', studyEbacTwo: 'React, Vue, Node.js, APIs, lógica de programação e organização de aplicações.', studyEbacThree: 'Git, GitHub, automação de build, testes, publicação e boas práticas de desenvolvimento.',
+      studyUspTitle: 'Engenharia Ambiental — Bacharelado', studyUspSummary: 'Percurso universitário interdisciplinar que fortaleceu pensamento sistêmico, pesquisa e análise de problemas complexos ligados a ambiente, sociedade e tecnologia.',
+      studyUspOne: 'Raciocínio quantitativo, investigação científica e leitura crítica de dados.', studyUspTwo: 'Compreensão de sistemas ambientais e relações entre processos naturais e humanos.', studyUspThree: 'Trabalho interdisciplinar, documentação e desenvolvimento de soluções orientadas a impacto.',
+      experienceLabel: 'Experiências', experienceHeading: 'Experiência multidisciplinar, execução técnica e repertório visual.',
       timelineMakers: 'Pesquisa e projetos interdisciplinares em tecnologia, prototipagem, eletrônica criativa e inovação.',
       timelineChucky: 'Pesquisa criativa publicitária, referências visuais, tendências e construção de narrativas para campanhas.',
-      timelineGuma: 'Pesquisa, desenvolvimento conceitual e assistência criativa em coleção de moda.',
       timelineBain: 'Estágio temporário com suporte operacional, organização de informações e colaboração entre áreas.',
       timelineCartel: 'Design gráfico e assistência de direção de arte para peças, campanhas e identidades visuais.',
       contactLabel: 'Vamos construir algo relevante.', contactHeading: 'Disponível para vagas júnior, projetos e colaborações.',
@@ -38,23 +44,29 @@
       searchPlaceholder: 'Buscar projeto, tecnologia ou tema'
     },
     en: {
-      navProjects: 'Projects', navArchive: 'Archive', navAbout: 'About', navContact: 'Contact',
+      navProjects: 'Projects', navArchive: 'Archive', navAbout: 'About', navStudies: 'Studies', navExperience: 'Experience', navContact: 'Contact',
       availability: 'Open to technology opportunities',
       heroIntro: 'I build digital products at the intersection of code, design and human experience — from responsive interfaces to applications using APIs, AI and creative hardware.',
       seeProjects: 'View projects', projectCount: 'mapped projects', branchCount: 'study branches', practiceYears: 'coding practice',
       selectedWork: 'Selected work', projectsHeading: 'Projects combining function, narrative and execution.',
-      completeArchive: 'Complete archive', archiveHeading: 'Every repository, branch and deployment — without duplicates.',
+      completeArchive: 'Complete archive', archiveHeading: 'Every repository, branch and deployment.',
       filterAll: 'All', filterProduct: 'Products', filterFundamentals: 'Fundamentals', filterExperimental: 'Experiments',
       visibleResults: 'visible results', courseRepo: 'Open course repository ↗', emptyState: 'No projects match these filters.',
+      sortLabel: 'Sort', sortCurated: 'Curated', sortTitle: 'A—Z', sortNewest: 'Newest', clearSearch: 'Clear search',
+      statsVisible: 'projects', statsLive: 'live demos', statsTech: 'technologies', quickSearch: 'Quick searches', queryFor: 'for',
       aboutLabel: 'About', aboutHeading: 'Curiosity as a method. Technology as a language.',
       aboutLead: 'I am Lucy Mazzini, a junior developer working across programming, design, research and technological art.',
       aboutBodyOne: 'My practice combines interface construction, logic, APIs and user experience. I enjoy transforming complex ideas into clear, accessible and visually distinctive products.',
       aboutBodyTwo: 'Since 2020, I have developed academic and independent web projects. At Makers / STEAM Lab USP, I also explore prototyping, electronics and interactive systems — bridging software, objects and space.',
       artPortfolio: 'Art portfolio ↗', toolbox: 'Toolbox', toolboxDescription: 'Technologies used across real projects, exercises and prototypes.',
-      trajectory: 'Trajectory', trajectoryHeading: 'Multidisciplinary experience, technical execution and visual repertoire.',
+      studiesLabel: 'Studies', studiesHeading: 'Technical training and interdisciplinary thinking.', studyOngoing: 'In progress', studyPaused: 'Paused degree', studyLearningLabel: 'Learning',
+      studyEbacTitle: 'Full Stack Python Developer — Professional Program', studyEbacSummary: 'Two-year professional program focused on building complete web applications, from interface to back end, through continuous project-based practice.',
+      studyEbacOne: 'HTML, CSS, JavaScript and TypeScript for responsive interfaces.', studyEbacTwo: 'React, Vue, Node.js, APIs, programming logic and application organization.', studyEbacThree: 'Git, GitHub, build automation, testing, publishing and development practices.',
+      studyUspTitle: 'Environmental Engineering — Bachelor Program', studyUspSummary: 'An interdisciplinary university path that strengthened systems thinking, research and analysis of complex problems connecting environment, society and technology.',
+      studyUspOne: 'Quantitative reasoning, scientific inquiry and critical data reading.', studyUspTwo: 'Understanding environmental systems and relationships between natural and human processes.', studyUspThree: 'Interdisciplinary work, documentation and impact-oriented solution development.',
+      experienceLabel: 'Experience', experienceHeading: 'Multidisciplinary experience, technical execution and visual repertoire.',
       timelineMakers: 'Research and interdisciplinary projects involving technology, prototyping, creative electronics and innovation.',
       timelineChucky: 'Creative advertising research, visual references, trends and narrative development for campaigns.',
-      timelineGuma: 'Research, conceptual development and creative assistance for a fashion collection.',
       timelineBain: 'Temporary internship supporting operations, information organization and cross-team collaboration.',
       timelineCartel: 'Graphic design and art direction assistance for campaign assets and visual identities.',
       contactLabel: 'Let’s build something relevant.', contactHeading: 'Available for junior roles, projects and collaborations.',
@@ -72,12 +84,40 @@
   const t = (key) => translations[state.language][key] || key;
   const descriptionFor = (project) => project.description?.[state.language] || project.description?.pt || '';
   const categoryLabel = (category) => t(`category_${category}`);
+  const categories = ['product', 'frontend', 'fundamentals', 'experimental'];
+  const normalizeText = (value = '') => String(value)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9+#./\s-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const searchTextFor = (project) => normalizeText([
+    project.title,
+    project.description?.pt,
+    project.description?.en,
+    ...project.stack,
+    project.branch,
+    project.deployment,
+    project.category,
+    project.source
+  ].filter(Boolean).join(' '));
+  const matchesQuery = (project, query) => {
+    const tokens = normalizeText(query).split(' ').filter(Boolean);
+    if (!tokens.length) return true;
+    const haystack = searchTextFor(project);
+    return tokens.every((token) => haystack.includes(token));
+  };
 
   const featuredContainer = $('[data-featured-projects]');
   const archiveContainer = $('[data-project-list]');
   const visibleCount = $('[data-visible-count]');
   const emptyState = $('[data-empty-state]');
   const dialog = $('[data-project-dialog]');
+  const resultsChart = $('[data-results-chart]');
+  const searchInput = $('[data-search]');
+  const clearSearchButton = $('[data-clear-search]');
+  const searchSuggestions = $('[data-search-suggestions]');
 
   function initials(title) {
     return title.split(/\s+/).filter(Boolean).slice(0, 2).map((word) => word[0]).join('').toUpperCase();
@@ -89,7 +129,6 @@
     if (project.visual === 'birthday') return `<div class="visual visual--birthday"><span class="date">13·04</span><span class="window"></span>${label}</div>`;
     if (project.visual === 'avatar') return `<div class="visual visual--avatar"><div class="element-ring"><span>AR</span><span>FOGO</span><span>TERRA</span><span>ÁGUA</span></div>${label}</div>`;
     if (project.visual === 'tea') return `<div class="visual visual--tea"><div class="tea-box">EARL<br>GREY</div><div class="tea-box">MATCHA<br>01</div><div class="tea-box">HIBISCO<br>02</div>${label}</div>`;
-    if (project.visual === 'sports') return `<div class="visual visual--sports"><div class="sport-card"></div><div class="sport-card"></div>${label}</div>`;
     if (project.visual === 'fashion') return `<div class="visual visual--fashion"><span class="editorial-a">A</span><span class="editorial-note">ATELIÊ AURORA / MODA FEMININA / EDITORIAL WEB</span>${label}</div>`;
     const palette = ['#c8d6ff','#ffd6e5','#d8efc1','#ffe5b4','#d9d4ff','#c6f1ec'];
     const color = palette[Math.abs(project.id.split('').reduce((a, c) => a + c.charCodeAt(0), 0)) % palette.length];
@@ -119,7 +158,7 @@
   function archiveItem(project, index) {
     const sourceType = project.source.includes('branch') ? t('source_branch') : project.source.includes('case') ? t('source_case') : t('source_repository');
     return `
-      <article class="archive-item" data-archive-item data-category="${project.category}" data-searchable="${[project.title, descriptionFor(project), ...project.stack, project.branch || '', project.deployment || ''].join(' ').toLowerCase()}">
+      <article class="archive-item" data-archive-item data-project-id="${project.id}" data-category="${project.category}">
         <span class="archive-number">${String(index + 1).padStart(2, '0')}</span>
         <div class="archive-title"><h3>${project.title}</h3><small>${sourceType}${project.branch ? ` / ${project.branch}` : ''}${project.status === 'wip' ? ` / ${t('status_wip')}` : ''}</small></div>
         <p class="archive-description">${descriptionFor(project)}</p>
@@ -132,33 +171,91 @@
       </article>`;
   }
 
+  function sortedProjects() {
+    const list = [...projects];
+    if (state.sort === 'title') return list.sort((a, b) => a.title.localeCompare(b.title, state.language));
+    if (state.sort === 'newest') return list.sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title, state.language));
+    return list;
+  }
+
+  function renderSearchSuggestions() {
+    if (!searchSuggestions) return;
+    const frequency = new Map();
+    projects.forEach((project) => project.stack.forEach((tech) => frequency.set(tech, (frequency.get(tech) || 0) + 1)));
+    const suggestions = [...frequency.entries()]
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .slice(0, 8);
+    searchSuggestions.innerHTML = `<span>${t('quickSearch')}</span>${suggestions.map(([tech, count]) => `<button type="button" data-search-suggestion="${tech}">${tech}<b>${count}</b></button>`).join('')}`;
+  }
+
+  function renderArchive() {
+    if (archiveContainer) archiveContainer.innerHTML = sortedProjects().map(archiveItem).join('');
+    bindDynamicEvents();
+    applyFilters();
+  }
+
   function renderProjects() {
     const featured = projects.filter((project) => project.featured);
     if (featuredContainer) featuredContainer.innerHTML = featured.map(featuredCard).join('');
-    if (archiveContainer) archiveContainer.innerHTML = projects.map(archiveItem).join('');
     $('[data-project-count]').textContent = projects.length;
-    bindDynamicEvents();
-    applyFilters();
+    renderSearchSuggestions();
+    renderArchive();
     setupRevealObserver();
   }
 
-  function applyFilters() {
-    const query = state.query.trim().toLowerCase();
-    let count = 0;
-    $$('[data-archive-item]').forEach((item) => {
-      const matchesFilter = state.filter === 'all' || item.dataset.category === state.filter;
-      const matchesQuery = !query || item.dataset.searchable.includes(query);
-      const visible = matchesFilter && matchesQuery;
-      item.hidden = !visible;
-      if (visible) count += 1;
+  function setFilter(filter) {
+    state.filter = categories.includes(filter) ? filter : 'all';
+    $$('[data-filter]').forEach((button) => button.classList.toggle('is-active', button.dataset.filter === state.filter));
+    applyFilters();
+  }
+
+  function updateDashboard(queryMatches, visibleProjects) {
+    const techCount = new Set(visibleProjects.flatMap((project) => project.stack)).size;
+    const liveCount = visibleProjects.filter((project) => project.demo).length;
+    $('[data-stat-visible]').textContent = visibleProjects.length;
+    $('[data-stat-live]').textContent = liveCount;
+    $('[data-stat-tech]').textContent = techCount;
+
+    const counts = Object.fromEntries(categories.map((category) => [category, queryMatches.filter((project) => project.category === category).length]));
+    $$('[data-filter-count]').forEach((element) => {
+      element.textContent = element.dataset.filterCount === 'all' ? queryMatches.length : counts[element.dataset.filterCount] || 0;
     });
-    if (visibleCount) visibleCount.textContent = count;
-    if (emptyState) emptyState.hidden = count !== 0;
+
+    if (resultsChart) {
+      const max = Math.max(1, ...Object.values(counts));
+      resultsChart.innerHTML = categories.map((category) => {
+        const count = counts[category];
+        const width = count ? Math.max(8, Math.round((count / max) * 100)) : 0;
+        return `<button class="chart-row${state.filter === category ? ' is-active' : ''}" type="button" data-chart-filter="${category}" aria-label="${categoryLabel(category)}: ${count}">
+          <span>${categoryLabel(category)}</span><i><b style="width:${width}%"></b></i><strong>${count}</strong>
+        </button>`;
+      }).join('');
+    }
+
+    if (clearSearchButton) clearSearchButton.hidden = !state.query;
+    const queryStatus = $('[data-query-status]');
+    if (queryStatus) queryStatus.textContent = state.query ? `· ${t('queryFor')} “${state.query}”` : '';
+  }
+
+  function applyFilters() {
+    const queryMatches = projects.filter((project) => matchesQuery(project, state.query));
+    const visibleProjects = queryMatches.filter((project) => state.filter === 'all' || project.category === state.filter);
+    const visibleIds = new Set(visibleProjects.map((project) => project.id));
+    $$('[data-archive-item]').forEach((item) => { item.hidden = !visibleIds.has(item.dataset.projectId); });
+    if (visibleCount) visibleCount.textContent = visibleProjects.length;
+    if (emptyState) emptyState.hidden = visibleProjects.length !== 0;
+    updateDashboard(queryMatches, visibleProjects);
   }
 
   function bindDynamicEvents() {
-    $$('[data-open-project]').forEach((button) => button.addEventListener('click', () => openProject(button.dataset.openProject)));
+    $$('[data-open-project]').forEach((button) => {
+      if (button.dataset.bound === 'true') return;
+      button.dataset.bound = 'true';
+      button.addEventListener('click', () => openProject(button.dataset.openProject));
+    });
     $$('[data-tilt]').forEach((card) => {
+      if (card.dataset.tiltBound === 'true') return;
+      card.dataset.tiltBound = 'true';
       card.addEventListener('pointermove', (event) => {
         if (matchMedia('(hover: none)').matches) return;
         const rect = card.getBoundingClientRect();
@@ -276,12 +373,31 @@
   }
 
   function setupGlobalInteractions() {
-    $('[data-search]')?.addEventListener('input', (event) => { state.query = event.target.value; applyFilters(); });
-    $$('[data-filter]').forEach((button) => button.addEventListener('click', () => {
-      state.filter = button.dataset.filter;
-      $$('[data-filter]').forEach((item) => item.classList.toggle('is-active', item === button));
+    searchInput?.addEventListener('input', (event) => { state.query = event.target.value; applyFilters(); });
+    clearSearchButton?.addEventListener('click', () => {
+      state.query = '';
+      searchInput.value = '';
+      searchInput.focus();
       applyFilters();
-    }));
+    });
+    $$('[data-filter]').forEach((button) => button.addEventListener('click', () => setFilter(button.dataset.filter)));
+    searchSuggestions?.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-search-suggestion]');
+      if (!button) return;
+      state.query = button.dataset.searchSuggestion;
+      searchInput.value = state.query;
+      setFilter('all');
+      searchInput.focus();
+    });
+    resultsChart?.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-chart-filter]');
+      if (button) setFilter(button.dataset.chartFilter);
+    });
+    $('[data-sort]')?.addEventListener('change', (event) => {
+      state.sort = event.target.value;
+      renderArchive();
+      setupRevealObserver();
+    });
     $('[data-language]')?.addEventListener('click', () => setLanguage(state.language === 'pt' ? 'en' : 'pt'));
     $('[data-theme-toggle]')?.addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'ink' ? 'paper' : 'ink';
@@ -302,8 +418,9 @@
     dialog?.addEventListener('close', () => document.body.classList.remove('is-locked'));
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === '/' && !/input|textarea/i.test(document.activeElement.tagName)) { event.preventDefault(); $('[data-search]')?.focus(); }
-      if (event.key === 'Escape') closeDialog();
+      if (event.key === '/' && !/input|textarea|select/i.test(document.activeElement.tagName)) { event.preventDefault(); searchInput?.focus(); }
+      if (event.key === 'Escape' && document.activeElement === searchInput && state.query) { state.query = ''; searchInput.value = ''; applyFilters(); }
+      else if (event.key === 'Escape') closeDialog();
     });
 
     const progress = $('.scroll-progress span');
