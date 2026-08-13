@@ -1,6 +1,6 @@
 # Lucy Mazzini — Portfolio
 
-Portfólio profissional de tecnologia de **Lucy Mazzini**, criado para reunir repositórios, branches e deploys da Vercel em uma experiência interativa e organizada.
+Portfólio profissional de **Lucy Mazzini**, desenvolvedora full stack Python. Reúne produtos em produção, arquitetura backend, APIs, segurança, dados e experiências digitais responsivas em uma apresentação interativa e organizada.
 
 ## O que este projeto entrega
 
@@ -9,7 +9,8 @@ Portfólio profissional de tecnologia de **Lucy Mazzini**, criado para reunir re
 - filtros com contadores por produto, front-end, fundamentos e experimentos;
 - gráficos interativos e indicadores atualizados conforme a pesquisa;
 - pesquisas rápidas por tecnologia e ordenação por curadoria, nome ou data;
-- sequência de destaques: Zabaan, Casa Verde e Ateliê Aurora;
+- PULSO em primeiro destaque: uma rede social full stack para criadores, publicada no Render;
+- sequência curada de produtos e interfaces: PULSO, Zabaan, Casa Verde e Ateliê Aurora;
 - visualização detalhada em modal;
 - preview sob demanda de demos publicadas;
 - interface bilíngue em português e inglês;
@@ -18,6 +19,23 @@ Portfólio profissional de tecnologia de **Lucy Mazzini**, criado para reunir re
 - suporte a `prefers-reduced-motion`;
 - layout responsivo e navegação por teclado;
 - deploy estático compatível com GitHub Pages e Vercel.
+
+## Projeto em destaque — PULSO
+
+A **PULSO — Rede Criativa** é o projeto full stack central deste portfólio. Foi construída com Python, Django, Django REST Framework, PostgreSQL e Redis, com feed social, perfis, conexões, mensagens em tempo real, chamadas WebRTC, uploads no Cloudinary, apoio via Pix direto, OAuth configurável, integração assistiva com IA, rate limit, testes automatizados, CI/CodeQL e deploy no Render.
+
+- Produto: https://pulso-rede-criativa.onrender.com
+- Código: https://github.com/labyrt/pulso-rede-criativa
+
+## Competências demonstradas
+
+- modelagem de domínio e arquitetura Django modular;
+- APIs REST, autenticação, autorização e proteção de dados;
+- PostgreSQL, Redis, WebSocket e comunicação em tempo real;
+- uploads assinados, validação de mídia e integração Cloudinary;
+- OAuth 2.0, Pix sem custódia e integrações externas por variáveis de ambiente;
+- testes automatizados, CI, análise CodeQL, deploy e documentação operacional;
+- experiência responsiva, acessibilidade e direção visual orientada a produto.
 
 ## Design
 
@@ -49,7 +67,7 @@ Princípios adotados:
 
 ## Atualizando os projetos
 
-Os projetos estão centralizados em `projects.js`. Cada item possui:
+Os projetos usados pela interface estão incorporados em `script.js`; `projects.js` mantém apenas um snapshot de compatibilidade. Cada item possui:
 
 - `title`, `year`, `category` e `status`;
 - descrições `pt` e `en`;
