@@ -4,6 +4,15 @@
   // Dados incorporados neste arquivo para evitar falhas de carregamento entre arquivos.
   const projects = [
   {
+    id: 'pulso', title: 'PULSO — Rede Criativa', year: '2026', category: 'product', featured: true, visual: 'pulso', status: 'published',
+    description: {
+      pt: 'Rede social full stack para criadores mostrarem trabalhos, construírem conexões e receberem apoio via Pix direto. O produto reúne autenticação, perfis, feed social, mensagens em tempo real, chamadas WebRTC, uploads de mídia, IA assistiva, moderação, testes e controles de segurança em produção.',
+      en: 'Full-stack social network where creators showcase work, build connections and receive direct Pix support. The product combines authentication, profiles, a social feed, real-time messaging, WebRTC calls, media uploads, assistive AI, moderation, automated tests and production security controls.'
+    },
+    stack: ['Python', 'Django', 'Django REST Framework', 'PostgreSQL', 'Redis', 'WebSocket', 'WebRTC', 'Cloudinary', 'OAuth 2.0', 'Pix', 'Gemini API', 'Render'],
+    repo: 'https://github.com/labyrt/pulso-rede-criativa', demo: 'https://pulso-rede-criativa.onrender.com', source: 'repository', deployment: 'pulso-rede-criativa'
+  },
+  {
     id: 'zabaan', title: 'Zabaan', year: '2026', category: 'product', featured: true, visual: 'zabaan', status: 'published',
     description: {
       pt: 'Plataforma open source para aprender persa em português, com 12 aulas, flashcards, quizzes, escrita, progresso local, síntese de voz e tutor de IA executado com Ollama.',
@@ -228,7 +237,7 @@
     pt: {
       navProjects: 'Projetos', navArchive: 'Arquivo', navAbout: 'Sobre', navStudies: 'Estudos', navExperience: 'Experiências', navContact: 'Contato',
       availability: 'Disponível para oportunidades em tecnologia',
-      heroIntro: 'Desenvolvo produtos digitais que aproximam código, design e experiência humana — de interfaces responsivas a aplicações com APIs, IA e hardware criativo.',
+      heroIntro: 'Desenvolvo produtos full stack do conceito ao deploy, unindo arquitetura backend, APIs, segurança, dados e direção visual em experiências digitais úteis e marcantes.',
       seeProjects: 'Ver projetos', projectCount: 'projetos mapeados', branchCount: 'branches de estudo', practiceYears: 'prática em programação',
       selectedWork: 'Trabalhos selecionados', projectsHeading: 'Projetos que unem função, narrativa e execução.',
       completeArchive: 'Arquivo completo', archiveHeading: 'Todos os repositórios, branches e deploys.',
@@ -237,13 +246,13 @@
       sortLabel: 'Ordenar', sortCurated: 'Curadoria', sortTitle: 'A—Z', sortNewest: 'Mais recentes', clearSearch: 'Limpar pesquisa',
       statsVisible: 'projetos', statsLive: 'demos ao vivo', statsTech: 'tecnologias', quickSearch: 'Pesquisas rápidas', queryFor: 'para',
       aboutLabel: 'Sobre', aboutHeading: 'Curiosidade como método. Tecnologia como linguagem.',
-      aboutLead: 'Sou Lucy Mazzini, desenvolvedora júnior com trajetória entre programação, design, pesquisa e arte tecnológica.',
-      aboutBodyOne: 'Minha prática combina construção de interfaces, lógica, APIs e experiência do usuário. Gosto de transformar ideias complexas em produtos claros, acessíveis e visualmente marcantes.',
+      aboutLead: 'Sou Lucy Mazzini, desenvolvedora full stack Python com repertório em produto, design, pesquisa e arte tecnológica.',
+      aboutBodyOne: 'Minha prática conecta arquitetura Django, APIs REST, bancos relacionais, serviços em tempo real, testes e segurança a interfaces responsivas. Gosto de transformar problemas complexos em produtos claros, confiáveis e visualmente marcantes.',
       aboutBodyTwo: 'Desde 2020, desenvolvo projetos web acadêmicos e autorais. No Makers / STEAM Lab USP, também investigo prototipagem, eletrônica e sistemas interativos — uma ponte entre software, objeto e espaço.',
       artPortfolio: 'Portfólio artístico ↗', toolbox: 'Caixa de ferramentas', toolboxDescription: 'Tecnologias usadas em projetos reais, exercícios e protótipos.',
       studiesLabel: 'Estudos', studiesHeading: 'Formação técnica e pensamento interdisciplinar.', studyOngoing: 'Em andamento', studyPaused: 'Curso trancado', studyLearningLabel: 'Aprendizados',
       studyEbacTitle: 'Desenvolvedora Full Stack Python — Profissionalizante', studyEbacSummary: 'Formação profissionalizante de dois anos voltada à construção de aplicações web completas, da interface ao back-end, com prática contínua por projetos.',
-      studyEbacOne: 'HTML, CSS, JavaScript e TypeScript com interfaces responsivas.', studyEbacTwo: 'React, Vue, Node.js, APIs, lógica de programação e organização de aplicações.', studyEbacThree: 'Git, GitHub, automação de build, testes, publicação e boas práticas de desenvolvimento.',
+      studyEbacOne: 'Interfaces responsivas com HTML, CSS, JavaScript, TypeScript, React e Vue.', studyEbacTwo: 'Python, Django, Django REST Framework, PostgreSQL, Redis, APIs e comunicação em tempo real.', studyEbacThree: 'Git/GitHub, testes automatizados, CI/CD, deploy, segurança, OAuth, mídia em nuvem e observabilidade.',
       studyUspTitle: 'Engenharia Ambiental — Bacharelado', studyUspSummary: 'Percurso universitário interdisciplinar que fortaleceu pensamento sistêmico, pesquisa e análise de problemas complexos ligados a ambiente, sociedade e tecnologia.',
       studyUspOne: 'Raciocínio quantitativo, investigação científica e leitura crítica de dados.', studyUspTwo: 'Compreensão de sistemas ambientais e relações entre processos naturais e humanos.', studyUspThree: 'Trabalho interdisciplinar, documentação e desenvolvimento de soluções orientadas a impacto.',
       experienceLabel: 'Experiências', experienceHeading: 'Experiência multidisciplinar, execução técnica e repertório visual.',
@@ -262,7 +271,7 @@
     en: {
       navProjects: 'Projects', navArchive: 'Archive', navAbout: 'About', navStudies: 'Studies', navExperience: 'Experience', navContact: 'Contact',
       availability: 'Open to technology opportunities',
-      heroIntro: 'I build digital products at the intersection of code, design and human experience — from responsive interfaces to applications using APIs, AI and creative hardware.',
+      heroIntro: 'I build full-stack products from concept to deployment, combining backend architecture, APIs, security, data and visual direction in useful, distinctive digital experiences.',
       seeProjects: 'View projects', projectCount: 'mapped projects', branchCount: 'study branches', practiceYears: 'coding practice',
       selectedWork: 'Selected work', projectsHeading: 'Projects combining function, narrative and execution.',
       completeArchive: 'Complete archive', archiveHeading: 'Every repository, branch and deployment.',
@@ -271,13 +280,13 @@
       sortLabel: 'Sort', sortCurated: 'Curated', sortTitle: 'A—Z', sortNewest: 'Newest', clearSearch: 'Clear search',
       statsVisible: 'projects', statsLive: 'live demos', statsTech: 'technologies', quickSearch: 'Quick searches', queryFor: 'for',
       aboutLabel: 'About', aboutHeading: 'Curiosity as a method. Technology as a language.',
-      aboutLead: 'I am Lucy Mazzini, a junior developer working across programming, design, research and technological art.',
-      aboutBodyOne: 'My practice combines interface construction, logic, APIs and user experience. I enjoy transforming complex ideas into clear, accessible and visually distinctive products.',
+      aboutLead: 'I am Lucy Mazzini, a Python full-stack developer working across product, design, research and technological art.',
+      aboutBodyOne: 'My practice connects Django architecture, REST APIs, relational databases, real-time services, testing and security to responsive interfaces. I enjoy turning complex problems into clear, reliable and visually distinctive products.',
       aboutBodyTwo: 'Since 2020, I have developed academic and independent web projects. At Makers / STEAM Lab USP, I also explore prototyping, electronics and interactive systems — bridging software, objects and space.',
       artPortfolio: 'Art portfolio ↗', toolbox: 'Toolbox', toolboxDescription: 'Technologies used across real projects, exercises and prototypes.',
       studiesLabel: 'Studies', studiesHeading: 'Technical training and interdisciplinary thinking.', studyOngoing: 'In progress', studyPaused: 'Paused degree', studyLearningLabel: 'Learning',
       studyEbacTitle: 'Full Stack Python Developer — Professional Program', studyEbacSummary: 'Two-year professional program focused on building complete web applications, from interface to back end, through continuous project-based practice.',
-      studyEbacOne: 'HTML, CSS, JavaScript and TypeScript for responsive interfaces.', studyEbacTwo: 'React, Vue, Node.js, APIs, programming logic and application organization.', studyEbacThree: 'Git, GitHub, build automation, testing, publishing and development practices.',
+      studyEbacOne: 'Responsive interfaces with HTML, CSS, JavaScript, TypeScript, React and Vue.', studyEbacTwo: 'Python, Django, Django REST Framework, PostgreSQL, Redis, APIs and real-time communication.', studyEbacThree: 'Git/GitHub, automated tests, CI/CD, deployment, security, OAuth, cloud media and observability.',
       studyUspTitle: 'Environmental Engineering — Bachelor Program', studyUspSummary: 'An interdisciplinary university path that strengthened systems thinking, research and analysis of complex problems connecting environment, society and technology.',
       studyUspOne: 'Quantitative reasoning, scientific inquiry and critical data reading.', studyUspTwo: 'Understanding environmental systems and relationships between natural and human processes.', studyUspThree: 'Interdisciplinary work, documentation and impact-oriented solution development.',
       experienceLabel: 'Experience', experienceHeading: 'Multidisciplinary experience, technical execution and visual repertoire.',
@@ -341,6 +350,7 @@
 
   function visualMarkup(project) {
     const label = `<span class="visual-label">${project.stack.slice(0, 3).join(' · ')}</span>`;
+    if (project.visual === 'pulso') return `<div class="visual visual--pulso"><span class="pulso-word">PULSO</span><span class="pulso-caption">REDE CRIATIVA / PRODUTO FULL STACK</span><span class="pulso-track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>${label}</div>`;
     if (project.visual === 'zabaan') return `<div class="visual visual--zabaan"><span class="glyph">سلام</span><span class="translit">SALÂM / OLÁ</span>${label}</div>`;
     if (project.visual === 'birthday') return `<div class="visual visual--birthday"><span class="date">13·04</span><span class="window"></span>${label}</div>`;
     if (project.visual === 'avatar') return `<div class="visual visual--avatar"><div class="element-ring"><span>AR</span><span>FOGO</span><span>TERRA</span><span>ÁGUA</span></div>${label}</div>`;

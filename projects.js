@@ -1,5 +1,16 @@
-// Compatibilidade: os dados dos projetos estão incorporados em script.js.
-2026', category: 'product', featured: true, visual: 'zabaan', status: 'published',
+// Snapshot de compatibilidade. A interface usa os dados incorporados em script.js.
+window.PORTFOLIO_PROJECTS = [
+  {
+    id: 'pulso', title: 'PULSO — Rede Criativa', year: '2026', category: 'product', featured: true, visual: 'pulso', status: 'published',
+    description: {
+      pt: 'Rede social full stack para criadores mostrarem trabalhos, construírem conexões e receberem apoio via Pix direto. O produto reúne autenticação, perfis, feed social, mensagens em tempo real, chamadas WebRTC, uploads de mídia, IA assistiva, moderação, testes e controles de segurança em produção.',
+      en: 'Full-stack social network where creators showcase work, build connections and receive direct Pix support. The product combines authentication, profiles, a social feed, real-time messaging, WebRTC calls, media uploads, assistive AI, moderation, automated tests and production security controls.'
+    },
+    stack: ['Python', 'Django', 'Django REST Framework', 'PostgreSQL', 'Redis', 'WebSocket', 'WebRTC', 'Cloudinary', 'OAuth 2.0', 'Pix', 'Gemini API', 'Render'],
+    repo: 'https://github.com/labyrt/pulso-rede-criativa', demo: 'https://pulso-rede-criativa.onrender.com', source: 'repository', deployment: 'pulso-rede-criativa'
+  },
+  {
+    id: 'zabaan', title: 'Zabaan', year: '2026', category: 'product', featured: true, visual: 'zabaan', status: 'published',
     description: {
       pt: 'Plataforma open source para aprender persa em português, com 12 aulas, flashcards, quizzes, escrita, progresso local, síntese de voz e tutor de IA executado com Ollama.',
       en: 'Open-source Persian learning platform for Portuguese speakers with 12 lessons, flashcards, quizzes, writing practice, local progress, speech synthesis and an optional Ollama-powered AI tutor.'
@@ -207,12 +218,6 @@
   },
   {
     id: 'inova-usp', title: 'Escultura Interativa — INOVA USP', year: '2025', category: 'experimental', featured: false, visual: 'arduino', status: 'case-study',
-    description: { pt: 'Escultura programada em Arduino/C++ com temporizador, display Nokia 5110, motor DC e lâmpada acionados em uma sequência performática.', en: 'Interactive sculpture programmed in Arduino/C++ with a timer, Nokia 5110 display, DC motor and lamp triggered in a performative sequence.' },
-    stack: ['Arduino', 'C++', 'Electronics', 'Nokia 5110', 'DC Motor'],
-    repo: 'https://github.com/labyrt', source: 'case study'
-  }
-];
-', title: 'Escultura Interativa — INOVA USP', year: '2025', category: 'experimental', featured: false, visual: 'arduino', status: 'case-study',
     description: { pt: 'Escultura programada em Arduino/C++ com temporizador, display Nokia 5110, motor DC e lâmpada acionados em uma sequência performática.', en: 'Interactive sculpture programmed in Arduino/C++ with a timer, Nokia 5110 display, DC motor and lamp triggered in a performative sequence.' },
     stack: ['Arduino', 'C++', 'Electronics', 'Nokia 5110', 'DC Motor'],
     repo: 'https://github.com/labyrt', source: 'case study'
