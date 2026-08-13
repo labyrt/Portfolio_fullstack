@@ -61,7 +61,7 @@
     id: 'portfolio', title: 'Lucy Mazzini — Portfolio', year: '2026', category: 'product', featured: false, visual: 'portfolio', status: 'published',
     description: { pt: 'Sistema de portfólio brutalista e responsivo que reúne repositórios, branches e deploys em um arquivo interativo, com filtros, busca, gráficos, preview ao vivo e interface bilíngue.', en: 'Brutalist responsive portfolio system bringing repositories, branches and deployments into an interactive archive with filters, search, charts, live previews and a bilingual interface.' },
     stack: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Pages', 'Vercel'],
-    repo: 'https://github.com/labyrt/Portfolio_fullstack', demo: 'https://noky.vercel.app', source: 'repository', deployment: 'noky'
+    repo: 'https://github.com/labyrt/Portfolio_fullstack', demo: 'https://portfolio-fullstack-smoky.vercel.app', source: 'repository', deployment: 'noky'
   },
   {
     id: 'styled-jobs', title: 'EBAC Jobs — Styled Components', year: '2026', category: 'frontend', featured: false, visual: 'jobs', status: 'code',

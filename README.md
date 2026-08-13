@@ -97,7 +97,7 @@ O projeto também funciona sem configuração de build: importe o repositório e
 ## Contato
 
 - Repositório do portfólio: https://github.com/labyrt/Portfolio_fullstack
-- Site publicado: https://noky.vercel.app
+- Site publicado: https://portfolio-fullstack-smoky.vercel.app
 
 - GitHub: https://github.com/labyrt
 - LinkedIn: https://www.linkedin.com/in/lucy-mazzini-0b1034323
