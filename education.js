@@ -37,12 +37,12 @@
 
     if (!grid.querySelector('[data-cruzeiro-course]')) {
       grid.insertAdjacentHTML('afterbegin', `
-        <article class="study-card study-card--data" data-cruzeiro-course>
+        <article class="study-card study-card--data" data-cruzeiro-course style="grid-column:1/-1;min-height:500px">
           <div class="study-card-top"><span>UNIVERSIDADE CRUZEIRO DO SUL</span><span data-course-i18n="status"></span></div>
           <div class="study-period" data-course-i18n="period"></div>
-          <h3 data-course-i18n="title"></h3>
-          <p data-course-i18n="summary"></p>
-          <div class="study-learning">
+          <h3 data-course-i18n="title" style="max-width:980px"></h3>
+          <p data-course-i18n="summary" style="max-width:900px"></p>
+          <div class="study-learning" style="max-width:980px">
             <span data-course-i18n="learning"></span>
             <ul>
               <li data-course-i18n="one"></li>
